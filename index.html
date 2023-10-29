@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshop on practical usage of HPC systems &mdash; EDIH AI4Health.Cro Training Course  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="_static/overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex/" />
+    <link rel="search" title="Search" href="search/" />
+    <link rel="next" title="Pre-workshop preparation" href="preparation/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            EDIH AI4Health.Cro Training Course
+              <img src="_static/edih-logo-white-transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Before the workshop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preparation/">Pre-workshop preparation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HPC-intro/HPC-intro/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC-intro/HPC-def/">High-Performance Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC-intro/HPC-examples/">Examples of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC-intro/HPC-arch/">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC-intro/HPC-parallel/">Parallel computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC-intro/HPC-infra/">Available infrastructures</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Working on the cluster</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Working-on-Cluster/Introduction/">Working on the Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Working-on-Cluster/System-overview/">System overview (Supek)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Working-on-Cluster/Access-Public-Key/">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Working-on-Cluster/Running-jobs/">Running jobs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">JUBE benchmarking</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="JUBE_intro/">Introduction to JUBE</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Julia for HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Julia/">JULIA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick-reference/">Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ai4healthcro.eu">EDIH AI4Health.CRO</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.irb.hr/eng/Scientific-Support-Centres/Centre-for-Informatics-and-Computing/Projects/HRZZ/Scalable-high-performance-algorithms-for-future-heterogeneous-distributed-computer-systems">HybridScale project</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.hpc-cc.hr/">NCC-HPC Croatia</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">EDIH AI4Health.Cro Training Course</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Workshop on practical usage of HPC systems</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/hybridscale/content/blob/main/content/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="workshop-on-practical-usage-of-hpc-systems">
+<h1>Workshop on practical usage of HPC systems<a class="headerlink" href="#workshop-on-practical-usage-of-hpc-systems" title="Permalink to this heading"></a></h1>
+<p>The workshop is dedicated to supporting researchers who utilize computer clusters and
+high-performance computing systems as part of their daily tasks. Its primary goal is
+to enhance their proficiency in utilizing these systems efficiently, thereby boosting
+productivity and reducing the time needed to prepare, execute, and analyze their workflows
+on remote computing platforms.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>120 min</p></td>
+<td><p>Introduction to HPC</p></td>
+</tr>
+<tr class="row-even"><td><p>120 min</p></td>
+<td><p>Working on the Cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>120 min</p></td>
+<td><p>JUBE benchmarking</p></td>
+</tr>
+<tr class="row-even"><td><p>120 min</p></td>
+<td><p>Julia for HPC</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Before the workshop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preparation/">Pre-workshop preparation</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Introduction to HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HPC-intro/HPC-intro/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC-intro/HPC-def/">High-Performance Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC-intro/HPC-examples/">Examples of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC-intro/HPC-arch/">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC-intro/HPC-parallel/">Parallel computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC-intro/HPC-infra/">Available infrastructures</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Working on the cluster</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Working-on-Cluster/Introduction/">Working on the Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Working-on-Cluster/System-overview/">System overview (Supek)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Working-on-Cluster/Access-Public-Key/">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Working-on-Cluster/Running-jobs/">Running jobs</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">JUBE benchmarking</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="JUBE_intro/">Introduction to JUBE</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Julia for HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Julia/">JULIA</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick-reference/">Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ai4healthcro.eu">EDIH AI4Health.CRO</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.irb.hr/eng/Scientific-Support-Centres/Centre-for-Informatics-and-Computing/Projects/HRZZ/Scalable-high-performance-algorithms-for-future-heterogeneous-distributed-computer-systems">HybridScale project</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.hpc-cc.hr/">NCC-HPC Croatia</a></li>
+</ul>
+</div>
+<section id="who-is-the-course-for">
+<span id="learner-personas"></span><h2>Who is the course for?<a class="headerlink" href="#who-is-the-course-for" title="Permalink to this heading"></a></h2>
+<p>The workshop is for young researchers, postdocs, experience researchers and developers/technician having need to use or are already using
+large computer cluster to perform their advanced calculations, run simulations and analyse results.</p>
+</section>
+<section id="about-the-workshop">
+<h2>About the workshop<a class="headerlink" href="#about-the-workshop" title="Permalink to this heading"></a></h2>
+<p>The workshop is organized as a one-day event divided into 3 topics: Introduction to work in the cluster environment, JUBE benchmarking tool and Julia programming
+language for HPC. It is not obligatory to attend all 3 topics, the learners can choose which topics (or all of them) to attend.</p>
+<p>The workshop is structured as a one-day event, covering four distinct topics:
+an introduction to high-performance computing, working in a cluster environment, the JUBE benchmarking tool,
+and programming with the Julia language for high-performance computing.
+Attendance at all four topics is not mandatory; learners have the flexibility to choose the specific
+topics they wish to attend.</p>
+</section>
+<section id="credits">
+<h2>Credits<a class="headerlink" href="#credits" title="Permalink to this heading"></a></h2>
+<p>The lesson file structure and browsing layout is inspired by and derived from
+<a class="reference external" href="https://github.com/coderefinery/sphinx-lesson">work</a> by <a class="reference external" href="https://coderefinery.org/">CodeRefinery</a> licensed under the <a class="reference external" href="http://opensource.org/licenses/mit-license.html">MIT license</a>. We have copied and adapted
+most of their license text.</p>
+<section id="instructional-material">
+<h3>Instructional Material<a class="headerlink" href="#instructional-material" title="Permalink to this heading"></a></h3>
+<p>This instructional material is made available under the
+<a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license (CC-BY-4.0)</a>.
+The following is a human-readable summary of (and not a substitute for) the
+<a class="reference external" href="https://creativecommons.org/licenses/by/4.0/legalcode">full legal text of the CC-BY-4.0 license</a>.
+You are free to:</p>
+<ul class="simple">
+<li><p><strong>share</strong> - copy and redistribute the material in any medium or format</p></li>
+<li><p><strong>adapt</strong> - remix, transform, and build upon the material for any purpose,
+even commercially.</p></li>
+</ul>
+<p>The licensor cannot revoke these freedoms as long as you follow these license terms:</p>
+<ul class="simple">
+<li><p><strong>Attribution</strong> - You must give appropriate credit (mentioning that your work
+is derived from work that is Copyright (c) ENCCS and individual contributors and, where practical, linking
+to <a class="reference external" href="https://enccs.github.io/sphinx-lesson-template">https://enccs.github.io/sphinx-lesson-template</a>), provide a <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">link to the license</a>, and indicate if changes were
+made. You may do so in any reasonable manner, but not in any way that suggests
+the licensor endorses you or your use.</p></li>
+<li><p><strong>No additional restrictions</strong> - You may not apply legal terms or
+technological measures that legally restrict others from doing anything the
+license permits.</p></li>
+</ul>
+<p>With the understanding that:</p>
+<ul class="simple">
+<li><p>You do not have to comply with the license for elements of the material in
+the public domain or where your use is permitted by an applicable exception
+or limitation.</p></li>
+<li><p>No warranties are given. The license may not give you all of the permissions
+necessary for your intended use. For example, other rights such as
+publicity, privacy, or moral rights may limit how you use the material.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="preparation/" class="btn btn-neutral float-right" title="Pre-workshop preparation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ruđer Bošković Institute and EDIH AI4Health.CRO.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
