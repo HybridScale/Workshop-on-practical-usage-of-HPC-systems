@@ -158,6 +158,9 @@ More information on the types of access can be found [here](https://www.hpc-cc.h
 Types of access to EuroHPC supercomputers. Table taken from [Hrvatski centar kompetencija za HPC - EuroHPC resursi](https://www.hpc-cc.hr/EuroHPC_resursi).
 ```
 
+*New type of EuroHPC JU Access [call](https://eurohpc-ju.europa.eu/eurohpc-ju-access-call-ai-and-data-intensive-applications_en) for AI and Data-Intensive Applications.*
+
+
 ```{callout} What are the conditions for access?
 Access if free of charge. Participation conditions depend on the specific access call that a research group has applied to. In general, users of EuroHPC systems commit to:
 - Acknowledge the use of the resources in their related publications

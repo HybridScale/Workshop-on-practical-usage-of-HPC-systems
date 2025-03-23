@@ -58,6 +58,22 @@ The goal of the memory hierarchy is to provide fast access to frequently used da
 Picture take from [https://computerscience.chemeketa.edu/](https://computerscience.chemeketa.edu/cs160Reader/ComputerArchitecture/MemoryHeirarchy.html)
 ```
 
+### Memory hierarchy in moderh HPC systems
+| **Level**	| **Type**	| **Size**	| **Speed**	| **Location** |
+|-------|-------|-------|-------|----------|
+Registers	| CPU Registers	| ~KB	| 1-2 cycles |	On-chip (CPU) |
+| L1 Cache	| SRAM	| 32–64 KB/core	| 2–4 cycles |	On-chip (CPU) |
+| L2 Cache	| SRAM	| 256 KB–1 MB/core	| 10–20 cycles |	On-chip (CPU) |
+| L3 Cache	| SRAM	| 10–100 MB/CPU	| 20–60 cycles |	On-chip (CPU) |
+| Main Memory	| DRAM (DDR4/DDR5)	| 128 GB–4 TB/node |	20–100 ns	| Off-chip |
+| GPU Memory	| HBM/GDDR6	| 16–80 GB/GPU	| 1–2 TB/s | (HBM)	| On-GPU |
+| Non-Volatile Memory |	Intel Optane/NVDIMM	| 100s GB–TB	| ~DRAM speed	| Off-chip |
+| Local Storage	| NVMe SSD/HDD	| TBs–PBs	| μs–ms |	Node-local |
+| Shared Storage	| Lustre/BeeGFS	| PBs–EBs	| Slower than local |	Network-attached |
+| Tape Storage	| Tape Drives	| PBs–EBs |	Seconds–minutes |	Offline |
+
+
+
 The main memory (also known as RAM - Random Access Memory) in an HPC cluster system or supercomputer is a critical component that directly impacts the performance of computational workloads. It serves as the primary workspace for data that the CPU and accelerators (e.g., GPUs) actively use during computation. The main memory is distributed and visible to only local CPUs and/or GPU (i.e. physical computer or compute node).
 
 **Storage** is a large number of dedicated servers (computers) consisting of a high volume and high read and write speeds. The storage systems are distributed and visible to many (all) compute and login nodes. 
