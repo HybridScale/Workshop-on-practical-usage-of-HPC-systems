@@ -46,14 +46,15 @@ Picture taken from [https://wiki.srce.hr/display/NR/Arhitektura+Supeka](https://
 
 ## Memory
 
-Many different types of memory
+The memory in modern HPC (and every other) systems is a structured in different levels each with different type, speed and capacity. 
 
-```{challenge} Do you know why are there multiple memory types and levels?
+```{challenge} Do you know why there are multiple types and levels of memory?
 ```
+
+The goal of the memory hierarchy is to provide fast access to frequently used data while maintaining large storage capacities for less frequently accessed data. This hierarchy is critical for optimizing performance in HPC systems, where data access patterns and computational intensity vary widely across workloads.
 
 ```{figure} ../img/Memory-Hierarchy.jpg
 :height: 12cm
-The memory hierarchy
 Picture take from [https://computerscience.chemeketa.edu/](https://computerscience.chemeketa.edu/cs160Reader/ComputerArchitecture/MemoryHeirarchy.html)
 ```
 
@@ -75,6 +76,10 @@ The major bottleneck in large scale and data-intensive applications is not compu
 
 ```{callout} HPC network   
 The interconnection inside HPC cluster has to have **high bandwidth** and **ultra low latency**!
+```
+
+```{figure} ../img/latency-bandwidth.jpeg
+Figure taken from [https://www.dnsstuff.com/latency-throughput-bandwidth] (https://www.dnsstuff.com/latency-throughput-bandwidth)
 ```
 
 Today, several types of interconnection are predominately used in the HPC systems and these are Infiniband and Ethernet, however, recently interconnect types have emerged such as Slingshot, Omni-Path and Tofu.
