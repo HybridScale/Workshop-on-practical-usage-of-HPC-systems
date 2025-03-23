@@ -90,9 +90,7 @@ Overview of HPC
 Many research and engineering problems today are beyond the capabilities of personal computers and even workstations. The US National Science Foundation (NSF) has recognized this and defined the '*Grand Challenges*', the fundamental problems of science and engineering that require high performance computers to solve:
   - Advanced New Materials
   - Prediction of Climate Change
-  - Quantum Chromodynamics and Condensed Matter Theory
   - Semiconductor Design and Manufacturing
-  - Assembling the Tree of Life
   - Drug Design and Development
   - Energy through Fusion
   - Water Sustainability
@@ -102,7 +100,8 @@ Many research and engineering problems today are beyond the capabilities of pers
   - Hazard Analysis and Management
   - Human Science and Policy
   - Virtual Product Design
-  - Cancer Detection and Therapy  
+  - Cancer Detection and Therapy
+  - AI and Deep Learning
   
 
 ```{callout} The main reason for using HPC

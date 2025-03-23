@@ -11,8 +11,8 @@ An overview of the HPC cluster architecture.
 ```
 
 ```{callout} The main components of the HPC cluster
-- **compute** - a collection of computers or servers that are the main power of the cluster on which the numbers are processed
-- **storage** - high-speed storage systems for storing large amounts of data
+- **compute** - a collection of computers or servers that are the main power of the computer cluster.
+- **memory** - high-speed and high capacity memory and storage systems for handling large amounts of data.
 - **network** - high-speed network systems that connect all parts of the cluster together
 ```
 
@@ -44,9 +44,22 @@ An example of the hybrid CPU-GPU computer server. Supercomputer Supek at the Uni
 Picture taken from [https://wiki.srce.hr/display/NR/Arhitektura+Supeka](https://wiki.srce.hr/display/NR/Arhitektura+Supeka).
 ```
 
-## Storage
+## Memory
 
-A large number of dedicated servers (computers) consisting of a high volume and high read and write speeds. The storage systems are distributed and visible to many (all) compute and login nodes. 
+Many different types of memory
+
+```{challenge} Do you know why are there multiple memory types and levels?
+```
+
+```{figure} ../img/Memory-Hierarchy.jpg
+:height: 12cm
+The memory hierarchy
+Picture take from [https://computerscience.chemeketa.edu/](https://computerscience.chemeketa.edu/cs160Reader/ComputerArchitecture/MemoryHeirarchy.html)
+```
+
+The main memory (also known as RAM - Random Access Memory) in an HPC cluster system or supercomputer is a critical component that directly impacts the performance of computational workloads. It serves as the primary workspace for data that the CPU and accelerators (e.g., GPUs) actively use during computation. The main memory is distributed and visible to only local CPUs and/or GPU (i.e. physical computer or compute node).
+
+**Storage** is a large number of dedicated servers (computers) consisting of a high volume and high read and write speeds. The storage systems are distributed and visible to many (all) compute and login nodes. 
 The storage has the following characteristics:
 - **Scalability**: highly scalable to accomodate growing data volumes generated and processed by HPC applications.
 - **Performance**: ensure that the data can be accessed, read and written at high speeds to keep pace with the computational requirements, support high-performance protocols, such as Parallel File Systems (parallel NFS), parallel IO
