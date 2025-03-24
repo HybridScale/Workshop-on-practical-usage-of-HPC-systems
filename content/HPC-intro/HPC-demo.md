@@ -245,7 +245,7 @@ In the script, we define the job parameters that the scheduler requires for reso
 ---
 ### Check job status
 
-The status of the job can be checked woth the following command:
+The status of the job can be checked with the following command:
 
 ```
 qstat -u testUser
