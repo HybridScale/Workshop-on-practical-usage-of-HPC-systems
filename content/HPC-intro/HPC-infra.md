@@ -176,8 +176,6 @@ The Development and Benchmark calls are continuously open, with deadlines set fo
 
 Detailed information on Access Policy can be found [here](https://eurohpc-ju.europa.eu/access-our-supercomputers/access-policy-and-faq_en).
 
-An examples of the EuroHPC-JU Benchmark [call](https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-benchmark-access_en) will all needed information and the total amount of resources available per each EuroHPC-JU supercomputer.
-
 ---
 
 ## Private HPC providers

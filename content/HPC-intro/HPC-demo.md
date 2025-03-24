@@ -18,11 +18,9 @@ HR HPC CC trenutno djeluje u sklopu projekta EuroCC 2 (2023 - 2025) čiji je cil
 ```
 -->
 
-In this demonstration, we will show you the basic principle of how to access an HPC cluster, prepare a simple job and execute it on the compute nodes. The test system is the supercomputer [Supek](HPC-infra.md) operated by the University of Zagreb, University Computing Centre. The test application running today is [ChASE](https://github.com/ChASE-library/ChASE), a Chebyshev Accelerated Subsapce Eigensolver for Dense Eigenproblems, a numerical library for solving large and complex eigenvalue problems on distributed computing systems.
+In this demonstration, we present the basic step to access an HPC cluster, prepare a simple job and run it on compute nodes. The test system used is the [Supek](HPC-infra.md) supercomputer operated by the University Computing Centre of the University of Zagreb. In this session we will run [ChASE](https://github.com/ChASE-library/ChASE) (Chebyshev Accelerated Subsapce Eigensolver), a numerical library designed for solving large and complex eigenvalue problems on distributed computing systems.
 
-The working principles demonstrated in this course are also applicable to all other clusters and supercomputers, but each may have its own software stack, hardware architecture and storage system.
-
-user.
+The principles shown in this course apply to all clusters and supercomputers. However, each system may have its own software stack, hardware architecture and memory configuration.
 
 
 ## A typical cluster workflow
@@ -45,7 +43,7 @@ An example of a typical HPC workflow.
 ---
 ### Generate SSH keys
 
-The first step is to authenticate the computer from which you plan to access the computer cluster. In this demo we will show to create SSH keys using command line. For more options check the Supek [documentation](https://wiki.srce.hr/pages/viewpage.action?pageId=121966392) (see 'Pristup klasteru Supek')
+The first step is to authenticate the computer that you will use to access the cluster. In this demonstration, we will show you how to generate SSH keys via command line. You acn find more options in the Supek [documentation](https://wiki.srce.hr/pages/viewpage.action?pageId=121966392) under 'Pristup klasteru Supek'.
 
 <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
 <body>
@@ -66,7 +64,7 @@ The first step is to authenticate the computer from which you plan to access the
 ---
 ### Upload public-key
 
-After the key pairs is created, the public key (the one with the extension `*.pub`) has to be uploaded to your account on *compute.srce.hr*. Once it is uploaded it will be automaticaly copied to the `home` folder
+After you have generated the key pairs, you must upload the public key (with the extension `*.pub`) to your account on *compute.srce.hr*. Once it is uploaded, it will be automaticaly copied to the `home` folder.
 <body>
   <video width="640" height="360" controls>
     <source src="../../extra/add-key-to-supek.webm" type="video/webm">
@@ -77,8 +75,8 @@ After the key pairs is created, the public key (the one with the extension `*.pu
 ---
 ### Loggin to the cluster (login node)
 
-To log into to the Supek, we have to connect to the GPU login node: *login-gpu.hpc.srce.hr* using `ssh` by providing your user name and the path to the private key file.
-Once you are logged, all interaction with the cluster are done from the login node. There is no possibility to directly access any of the compute nodes.
+To log in to Supek, connect to the GPU login node: *login-gpu.hpc.srce.hr* using `ssh` specifying your username and the path to your private key file.
+As soon as you are logged, all interaction with the cluster will take place via the login node, as direct access to the compute nodes is not possible.
 
 <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
 <body>
@@ -98,9 +96,9 @@ Once you are logged, all interaction with the cluster are done from the login no
 ---
 ### Copying files
 
-To transfer data between local computer and the cluster (i.e. login node) can be done by using both graphical and command-ine transfer tools, as long as they support secure transfer protocol. For example [MobaXterm](https://mobaxterm.mobatek.net/) or [WinSCP](https://winscp.net/eng/download.php) for Windows and `scp` and `rsync` command line tools on Linux.
+Data transfer between a local computer and the cluster (i.e. login node) can be done either with graphical and command line  tools, as long as they support secure transfer protocols. Examples are [MobaXterm](https://mobaxterm.mobatek.net/) or [WinSCP](https://winscp.net/eng/download.php) for Windows or the command line tools `scp` and `rsync` for Linux.
 
-An example of copying files from the local computer to the Supek using scp command line tool.
+An example of copying files from the local computer to the Supek using the command line tool scp.
 
 <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
 <body>
@@ -117,26 +115,26 @@ An example of copying files from the local computer to the Supek using scp comma
   </script>
 </body>
 
-The example show how to transfer the entire content of the folder `TiO2` from the local computer to the folder `DATA` at the Supek login node.
+The example shows how the entire content of the folder `TiO2` is transferred from the local computer to the folder `DATA` on the Supek login node.
 
 ---
 ### Job queues
 
-The compute nodes are grouped into job queues, based on the specific use. For example on Supek are defined 9 [job queues](https://wiki.srce.hr/pages/viewpage.action?pageId=121966239) each tailored for a specific types of jobs. 
-The next command are run on the login node of the Supek.
+The compute nodes are organised in job queues depending on their intended use. There are nine [job queues](https://wiki.srce.hr/pages/viewpage.action?pageId=121966239) on Supek, each of which is optimised for certain types of jobs. 
+The following commands should be executed from the Supek login node.
 
-To list all available queues on the system run:
+To list all available queues on the system, run:
 ```
 qstat -Q
 ```
 
-To list all the jobs that are currently running in the `gpu` queueu or are in the pending (waiting) can be inspected by running:
+To display all running and pending (waiting) jobs in the `gpu` queueu, use the following command:
 
 ```
 qstat -p gpu
 ```
 
-Print the full list of nodes with their loads and the jobs currently running on them.
+Dispaly a complete list of nodes, including their utilisation and the jobs currently running on them:
 ```
 pbsnodes -aSj
 ```
@@ -145,9 +143,12 @@ pbsnodes -aSj
 ---
 ### Prepare working environment on the login node
 
-In HPC clusters, several users often work simultaneously with different applications. Therefore, the applications in your current working environment are not activated by default. The reason for this is that users can isolate their software environments for their specific needs, easily switch between different versions of the same application (e.g. a researcher needs both Python 2.7 and 3.8 for different projects) and support application dependency management and the reduction of possible collisions.
+In HPC clusters, several users often run different applications at the same time. Therefore, the applications in your working environment are not activated by default, but the users have to load it by themselves. This allows users to:
+- Isolate their software environments for specific application/data requirements,
+- Easily switcg between different application versions (e.g. a researcher may need both Python 2.7 and 3.8 for different applications),
+- Manage dependencies effectively and minimise conflicts.
 
-Nowadays, one of the most common tools of the pre-installed appliation management in the HPC envorionment is called `Modulefiles`. The basic command is `module` and all changes on the environment variables are applicable only in the current session.
+A widely used tool for managing pre-installed applications in HPC environments is `Modulefiles`. The primary command is `module`, and changes to the environment variables only apply to the current user session.
 
 <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
 <body>
@@ -164,9 +165,11 @@ Nowadays, one of the most common tools of the pre-installed appliation managemen
   </script>
 </body>
 
-The command `module list` shows the currently loaded modules, i.e. the applications loaded in my environment. There is only one module, Python version 3.10, which was needed for the little tool called `asciinema`, which allowed me to record my terminal window. The command `module avail` shows all available modules that are installed in the system. Then we use `module spider` to search for a specific module called `pytorch`, which lists 4 different versions of the pytorch framework that are pre-installed on the system. Finally, we can check what the specific module (`pytorch/2.0.0`) would do in our environment if it were loaded. 
+The `module list` command displays the loaded modules and shows which applications are active in your environment. In this case, only one module -- Python 3.10 -- is loaded, as it is required for the `asciinema` tool used to record the terminal session. 
 
-In the followin video is shown the loading of a several module required to execute our code.
+To see all available modules installed on the system, use `module avail`. If you need to search for a specific module, `module spider pytorch` lists all available version fo the PyTorch framework -- in this example, four versions are pre-installed. Finally, to check what changes a particular module (e.g. `pytorch/2.0.0`) would make to your environment before you load it, you can view the details. 
+
+The following video demonstrates the loading of several modules required to run our code.
 
 <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
 <body>
@@ -186,11 +189,11 @@ In the followin video is shown the loading of a several module required to execu
 ---
 ### Prepare and submit job
 
-The ChASE library is first cloned from the GitHub
+Since our example application, the ChASE library, is not pre-installed on the system, we must first download it from the GitHub repository.
 ```
 git clone https://github.com/ChASE-library/ChASE.git
 ```
-and then compiled using `cmake` command (the commands are packed in the `gnu-activate.sh` files): 
+and compile it using the `cmake` command (the commands are listed in the `gnu-activate.sh` files): 
 ```
 cmake -B build-gnu-test \
  -DBUILD_WITH_EXAMPLES=ON \
@@ -203,9 +206,9 @@ cmake -B build-gnu-test \
 cmake --build $folder
 ```
 
-which will find the reqired dependencies for our program and prepare `Makefile` (first call to `cmake`) and then compile the application (second `cmake`). The executables are located in the `build-gnu-test` files under subfolder `examples`
+The `cmake` searches for the reqired software dependencies and generates a `Makefile` (the first run of `cmake`). In the second run, it compiles (builds) the application. The resulting executable files are located in the `build-gnu-test` directory under  `examples` subfolder.
 
-Now, the ChASE is compiled, we can create a simple script file describing our job.
+Once ChASE is compiled, we can create a simple script to define our job.
 
 <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
 <body>
@@ -222,7 +225,7 @@ Now, the ChASE is compiled, we can create a simple script file describing our jo
   </script>
 </body>
 
-In the script we define the job parameters that the scheduler requires for the allocation of resources (lines beginning with the keyword `#PBS`). The remaining lines are standard Linux commands that prepare environment variables, load modules, define paths, etc. Finally, the executable file of ChASE is started with the program `mpiexec`, which starts our executable file in parallel in 4 parallel processes, each running on a GPU device.
+In the script, we define the job parameters that the scheduler requires for resource allocation (lines beginning with the keyword `#PBS`). The remaining lines contain standard Linux commands to set up environment variables, load necessary modules and define paths. Finally, the ChASE executable is started with `mpiexec`, which executes the program in parallel on 4 parallel processes, each of which uses a separate GPU device.
 
 <link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
 <body>
@@ -242,4 +245,10 @@ In the script we define the job parameters that the scheduler requires for the a
 ---
 ### Check job status
 
+The status of the job can be checked woth the following command:
 
+```
+qstat -u testUser
+```
+
+This command only displays the active and pending jobs of the user with the username `testUser`.
