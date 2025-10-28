@@ -25,7 +25,14 @@ on remote computing platforms.
 
    preparation.md
 ..
-.. toctree::
+.. tocreetree::
+   :maxdepth: 1
+   :caption: Introduction to HPC for Health and Life Sciences
+
+   HPC-healthcare/HPC-def.md
+
+..
+   .. toctree::
    :maxdepth: 1
    :caption: Introduction to HPC
    
@@ -35,7 +42,7 @@ on remote computing platforms.
    HPC-intro/HPC-parallel.md
    HPC-intro/HPC-infra.md
    HPC-intro/HPC-demo.md
-
+..
 .. toctree::
    :maxdepth: 1
    :caption: Working on the cluster
