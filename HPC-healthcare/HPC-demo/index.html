@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demonstration &mdash; EDIH AI4Health.Cro Training Course  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/overrides.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Working on the Cluster" href="../../Working-on-Cluster/Introduction/" />
+    <link rel="prev" title="Available infrastructures" href="../HPC-infra/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            EDIH AI4Health.Cro Training Course
+              <img src="../../_static/edih-logo-white-transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction to HPC for Health and Life Sciences</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../HPC-intro/">About the Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC-def/">Introduction to High-Performance Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC-arch/">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC-parallel/">Parallel and distributed computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC-infra/">Available infrastructures</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Demonstration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a-typical-cluster-workflow">A typical cluster workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#generate-ssh-keys">Generate SSH keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upload-public-key">Upload public-key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loggin-to-the-cluster-login-node">Loggin to the cluster (login node)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#copying-files">Copying files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#job-queues">Job queues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prepare-working-environment-on-the-login-node">Prepare working environment on the login node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prepare-and-submit-job">Prepare and submit job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#check-job-status">Check job status</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Working on the cluster</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Introduction/">Working on the Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/System-overview/">System overview (Supek)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Access-Public-Key/">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Running-jobs/">Running jobs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-reference/">Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ai4healthcro.eu">EDIH AI4Health.CRO</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.irb.hr/eng/Scientific-Support-Centres/Centre-for-Informatics-and-Computing/Projects/HRZZ/Scalable-high-performance-algorithms-for-future-heterogeneous-distributed-computer-systems">HybridScale project</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.hpc-cc.hr/">HPC-CC Croatia</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">EDIH AI4Health.Cro Training Course</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Demonstration</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/hybridscale/content/blob/main/content/HPC-healthcare/HPC-demo.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="demonstration">
+<h1>Demonstration<a class="headerlink" href="#demonstration" title="Permalink to this heading"></a></h1>
+<!--
+## Hrvatski centar kompentencija za HPC
+
+[HR HPC CC](https://www.hpc-cc.hr/) uspostavljen je u sklopu projekta EuroCC (2020 - 2022) kao dio mreže nacionalnih centara kompetencija za HPC u 33 države članice Zajedničkog poduzeća za europsko računarstvo visokih performansi (EuroHPC JU).
+
+One-Stop-Shop za HPC
+- podrška korisnicima u korištenju HPC resursa
+- razvoj novih kompetencija iz HPC područja
+- suradnja akademske zajednice i gospodarstva
+- izgradnja europskog HPC ekosustava
+
+HR HPC CC trenutno djeluje u sklopu projekta EuroCC 2 (2023 - 2025) čiji je cilj daljnje promicanje korištenja HPC-a na nacionalnoj razini identificiranjem relevantnih korisnika.
+
+```{figure} ../img/eurocc-map.png
+
+```
+-->
+<p>In this demonstration, we present the basic step to access an HPC cluster, prepare a simple job and run it on compute nodes. The test system used is the <a class="reference internal" href="../HPC-infra/"><span class="doc std std-doc">Supek</span></a> supercomputer operated by the University Computing Centre of the University of Zagreb. In this session we will run <a class="reference external" href="https://github.com/ChASE-library/ChASE">ChASE</a> (Chebyshev Accelerated Subsapce Eigensolver), a numerical library designed for solving large and complex eigenvalue problems on distributed computing systems.</p>
+<p>The principles shown in this course apply to all clusters and supercomputers. However, each system may have its own software stack, hardware architecture and memory configuration.</p>
+<section id="a-typical-cluster-workflow">
+<h2>A typical cluster workflow<a class="headerlink" href="#a-typical-cluster-workflow" title="Permalink to this heading"></a></h2>
+<div class="admonition-the-basic-steps-are-the-following callout admonition" id="callout-0">
+<p class="admonition-title">The basic steps are the following:</p>
+<ol class="arabic simple">
+<li><p><strong>Authenticatio</strong>n (this step is done only once, at the first login).</p>
+<ol class="arabic simple">
+<li><p>Generating SSH keys.</p></li>
+<li><p>Copy public key to the remove server.</p></li>
+</ol>
+</li>
+<li><p><strong>Connect to</strong> remote server using secure shell protocol (SSH).</p></li>
+<li><p><strong>Copy</strong> your <strong>data</strong> using secure copy (e.g. scp, rsync).</p></li>
+<li><p><strong>Prepare a script</strong> that describe how your application and data will be executed.</p></li>
+<li><p><strong>Allocate resources</strong> and submit your job using job and resource management system (e.g. SLURM, PBS).</p></li>
+<li><p>Once the job is finished, <strong>retrieve output</strong> data.</p></li>
+</ol>
+</div>
+<figure class="align-default" id="id1">
+<img alt="../../_images/demo-run.png" src="../../_images/demo-run.png" />
+<figcaption>
+<p><span class="caption-text">An example of a typical HPC workflow.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<section id="generate-ssh-keys">
+<h3>Generate SSH keys<a class="headerlink" href="#generate-ssh-keys" title="Permalink to this heading"></a></h3>
+<p>The first step is to authenticate the computer that you will use to access the cluster. In this demonstration, we will show you how to generate SSH keys via command line. You acn find more options in the Supek <a class="reference external" href="https://wiki.srce.hr/pages/viewpage.action?pageId=121966392">documentation</a> under ‘Pristup klasteru Supek’.</p>
+<link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
+<body>
+  <div id="sshkey-gen"></div>
+  <script src="../../_static/asciinema-player.min.js"></script>
+  <script>
+    AsciinemaPlayer.create('../../extra/keygen.cast', document.getElementById('sshkey-gen'), {
+      loop: false,
+      fit: "width",
+      terminalFontSize: 'medium',
+      cols: 100,
+      rows: 30,
+      });
+  </script>
+</body>
+</section>
+<hr class="docutils" />
+<section id="upload-public-key">
+<h3>Upload public-key<a class="headerlink" href="#upload-public-key" title="Permalink to this heading"></a></h3>
+<p>After you have generated the key pairs, you must upload the public key (with the extension <code class="docutils literal notranslate"><span class="pre">*.pub</span></code>) to your account on <em>compute.srce.hr</em>. Once it is uploaded, it will be automaticaly copied to the <code class="docutils literal notranslate"><span class="pre">home</span></code> folder.</p>
+<body>
+  <video width="640" height="360" controls>
+    <source src="../../extra/add-key-to-supek.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+</body>
+</section>
+<hr class="docutils" />
+<section id="loggin-to-the-cluster-login-node">
+<h3>Loggin to the cluster (login node)<a class="headerlink" href="#loggin-to-the-cluster-login-node" title="Permalink to this heading"></a></h3>
+<p>To log in to Supek, connect to the GPU login node: <em>login-gpu.hpc.srce.hr</em> using <code class="docutils literal notranslate"><span class="pre">ssh</span></code> specifying your username and the path to your private key file.
+As soon as you are logged, all interaction with the cluster will take place via the login node, as direct access to the compute nodes is not possible.</p>
+<link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
+<body>
+  <div id="login-supek"></div>
+  <script src="../../_static/asciinema-player.min.js"></script>
+  <script>
+    AsciinemaPlayer.create('../../extra/login-supek.cast', document.getElementById('login-supek'), {
+      loop: false,
+      fit: "width",
+      terminalFontSize: 'medium',
+      cols: 100,
+      rows: 30,
+      });
+  </script>
+</body>
+</section>
+<hr class="docutils" />
+<section id="copying-files">
+<h3>Copying files<a class="headerlink" href="#copying-files" title="Permalink to this heading"></a></h3>
+<p>Data transfer between a local computer and the cluster (i.e. login node) can be done either with graphical and command line  tools, as long as they support secure transfer protocols. Examples are <a class="reference external" href="https://mobaxterm.mobatek.net/">MobaXterm</a> or <a class="reference external" href="https://winscp.net/eng/download.php">WinSCP</a> for Windows or the command line tools <code class="docutils literal notranslate"><span class="pre">scp</span></code> and <code class="docutils literal notranslate"><span class="pre">rsync</span></code> for Linux.</p>
+<p>An example of copying files from the local computer to the Supek using the command line tool scp.</p>
+<link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
+<body>
+  <div id="copy-supek"></div>
+  <script src="../../_static/asciinema-player.min.js"></script>
+  <script>
+    AsciinemaPlayer.create('../../extra/copy.cast', document.getElementById('copy-supek'), {
+      loop: false,
+      fit: "width",
+      terminalFontSize: 'medium',
+      cols: 100,
+      rows: 30,
+      });
+  </script>
+</body>
+<p>The example shows how the entire content of the folder <code class="docutils literal notranslate"><span class="pre">TiO2</span></code> is transferred from the local computer to the folder <code class="docutils literal notranslate"><span class="pre">DATA</span></code> on the Supek login node.</p>
+</section>
+<hr class="docutils" />
+<section id="job-queues">
+<h3>Job queues<a class="headerlink" href="#job-queues" title="Permalink to this heading"></a></h3>
+<p>The compute nodes are organised in job queues depending on their intended use. There are nine <a class="reference external" href="https://wiki.srce.hr/pages/viewpage.action?pageId=121966239">job queues</a> on Supek, each of which is optimised for certain types of jobs.
+The following commands should be executed from the Supek login node.</p>
+<p>To list all available queues on the system, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qstat</span> <span class="o">-</span><span class="n">Q</span>
+</pre></div>
+</div>
+<p>To display all running and pending (waiting) jobs in the <code class="docutils literal notranslate"><span class="pre">gpu</span></code> queueu, use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qstat</span> <span class="o">-</span><span class="n">p</span> <span class="n">gpu</span>
+</pre></div>
+</div>
+<p>Dispaly a complete list of nodes, including their utilisation and the jobs currently running on them:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pbsnodes</span> <span class="o">-</span><span class="n">aSj</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="prepare-working-environment-on-the-login-node">
+<h3>Prepare working environment on the login node<a class="headerlink" href="#prepare-working-environment-on-the-login-node" title="Permalink to this heading"></a></h3>
+<p>In HPC clusters, several users often run different applications at the same time. Therefore, the applications in your working environment are not activated by default, but the users have to load it by themselves. This allows users to:</p>
+<ul class="simple">
+<li><p>Isolate their software environments for specific application/data requirements,</p></li>
+<li><p>Easily switcg between different application versions (e.g. a researcher may need both Python 2.7 and 3.8 for different applications),</p></li>
+<li><p>Manage dependencies effectively and minimise conflicts.</p></li>
+</ul>
+<p>A widely used tool for managing pre-installed applications in HPC environments is <code class="docutils literal notranslate"><span class="pre">Modulefiles</span></code>. The primary command is <code class="docutils literal notranslate"><span class="pre">module</span></code>, and changes to the environment variables only apply to the current user session.</p>
+<link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
+<body>
+  <div id="module-supek"></div>
+  <script src="../../_static/asciinema-player.min.js"></script>
+  <script>
+    AsciinemaPlayer.create('../../extra/module.cast', document.getElementById('module-supek'), {
+      loop: false,
+      fit: "width",
+      terminalFontSize: 'medium',
+      cols: 100,
+      rows: 30,
+      });
+  </script>
+</body>
+<p>The <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">list</span></code> command displays the loaded modules and shows which applications are active in your environment. In this case, only one module – Python 3.10 – is loaded, as it is required for the <code class="docutils literal notranslate"><span class="pre">asciinema</span></code> tool used to record the terminal session.</p>
+<p>To see all available modules installed on the system, use <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code>. If you need to search for a specific module, <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">spider</span> <span class="pre">pytorch</span></code> lists all available version fo the PyTorch framework – in this example, four versions are pre-installed. Finally, to check what changes a particular module (e.g. <code class="docutils literal notranslate"><span class="pre">pytorch/2.0.0</span></code>) would make to your environment before you load it, you can view the details.</p>
+<p>The following video demonstrates the loading of several modules required to run our code.</p>
+<link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
+<body>
+  <div id="load-modules-supek"></div>
+  <script src="../../_static/asciinema-player.min.js"></script>
+  <script>
+    AsciinemaPlayer.create('../../extra/load-module.cast', document.getElementById('load-modules-supek'), {
+      loop: false,
+      fit: "width",
+      terminalFontSize: 'medium',
+      cols: 100,
+      rows: 30,
+      });
+  </script>
+</body>
+</section>
+<hr class="docutils" />
+<section id="prepare-and-submit-job">
+<h3>Prepare and submit job<a class="headerlink" href="#prepare-and-submit-job" title="Permalink to this heading"></a></h3>
+<p>Since our example application, the ChASE library, is not pre-installed on the system, we must first download it from the GitHub repository.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ChASE</span><span class="o">-</span><span class="n">library</span><span class="o">/</span><span class="n">ChASE</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>and compile it using the <code class="docutils literal notranslate"><span class="pre">cmake</span></code> command (the commands are listed in the <code class="docutils literal notranslate"><span class="pre">gnu-activate.sh</span></code> files):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cmake -B build-gnu-test \
+ -DBUILD_WITH_EXAMPLES=ON \
+ -DCHASE_OUTPUT=ON \
+ -DCMAKE_CXX_COMPILER=CC \
+ -DCMAKE_C_COMPILER=cc \
+ -DCMAKE_Fortran_COMPILER=ftn \
+ -DCMAKE_CUDA_COMPILER=nvcc -DCMAKE_CUDA_FLAGS=&quot;--allow-unsupported-compiler&quot;
+
+cmake --build $folder
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">cmake</span></code> searches for the reqired software dependencies and generates a <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> (the first run of <code class="docutils literal notranslate"><span class="pre">cmake</span></code>). In the second run, it compiles (builds) the application. The resulting executable files are located in the <code class="docutils literal notranslate"><span class="pre">build-gnu-test</span></code> directory under  <code class="docutils literal notranslate"><span class="pre">examples</span></code> subfolder.</p>
+<p>Once ChASE is compiled, we can create a simple script to define our job.</p>
+<link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
+<body>
+  <div id="load-modules-supek"></div>
+  <script src="../../_static/asciinema-player.min.js"></script>
+  <script>
+    AsciinemaPlayer.create('../../extra/load-modules.cast', document.getElementById('load-modules-supek'), {
+      loop: false,
+      fit: "width",
+      terminalFontSize: 'medium',
+      cols: 100,
+      rows: 30,
+      });
+  </script>
+</body>
+<p>In the script, we define the job parameters that the scheduler requires for resource allocation (lines beginning with the keyword <code class="docutils literal notranslate"><span class="pre">#PBS</span></code>). The remaining lines contain standard Linux commands to set up environment variables, load necessary modules and define paths. Finally, the ChASE executable is started with <code class="docutils literal notranslate"><span class="pre">mpiexec</span></code>, which executes the program in parallel on 4 parallel processes, each of which uses a separate GPU device.</p>
+<link rel="stylesheet" type="text/css" href="../../_static/asciinema-player.css" />
+<body>
+  <div id="prepare-run-chase"></div>
+  <script src="../../_static/asciinema-player.min.js"></script>
+  <script>
+    AsciinemaPlayer.create('../../extra/prepare-chase.cast', document.getElementById('prepare-run-chase'), {
+      loop: false,
+      fit: "width",
+      terminalFontSize: 'medium',
+      cols: 100,
+      rows: 30,
+      });
+  </script>
+</body>
+</section>
+<hr class="docutils" />
+<section id="check-job-status">
+<h3>Check job status<a class="headerlink" href="#check-job-status" title="Permalink to this heading"></a></h3>
+<p>The status of the job can be checked with the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qstat</span> <span class="o">-</span><span class="n">u</span> <span class="n">testUser</span>
+</pre></div>
+</div>
+<p>This command only displays the active and pending jobs of the user with the username <code class="docutils literal notranslate"><span class="pre">testUser</span></code>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../HPC-infra/" class="btn btn-neutral float-left" title="Available infrastructures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../Working-on-Cluster/Introduction/" class="btn btn-neutral float-right" title="Working on the Cluster" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ruđer Bošković Institute and EDIH AI4Health.CRO.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

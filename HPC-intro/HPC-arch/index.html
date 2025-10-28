@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architecture &mdash; EDIH AI4Health.Cro Training Course  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/overrides.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            EDIH AI4Health.Cro Training Course
+              <img src="../../_static/edih-logo-white-transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction to HPC for Health and Life Sciences</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../HPC-healthcare/HPC-intro/">About the Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../HPC-healthcare/HPC-def/">Introduction to High-Performance Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../HPC-healthcare/HPC-arch/">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../HPC-healthcare/HPC-parallel/">Parallel and distributed computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../HPC-healthcare/HPC-infra/">Available infrastructures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../HPC-healthcare/HPC-demo/">Demonstration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Working on the cluster</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Introduction/">Working on the Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/System-overview/">System overview (Supek)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Access-Public-Key/">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Running-jobs/">Running jobs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-reference/">Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ai4healthcro.eu">EDIH AI4Health.CRO</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.irb.hr/eng/Scientific-Support-Centres/Centre-for-Informatics-and-Computing/Projects/HRZZ/Scalable-high-performance-algorithms-for-future-heterogeneous-distributed-computer-systems">HybridScale project</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.hpc-cc.hr/">HPC-CC Croatia</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">EDIH AI4Health.Cro Training Course</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Architecture</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/hybridscale/content/blob/main/content/HPC-intro/HPC-arch.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="architecture">
+<h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this heading"></a></h1>
+<section id="cluster-architecture">
+<h2>Cluster architecture<a class="headerlink" href="#cluster-architecture" title="Permalink to this heading"></a></h2>
+<p>HPC is often equated with a cluster computer, a collection of computers linked together over a high-speed network to perform highly complex computing tasks. These connected computers (usually called <em>servers</em>) work together to provide the processing power to analyze and process large data sets, simulate complex systems, and solve complex scientific and engineering problems.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/architecture-shematic.png"><img alt="../../_images/architecture-shematic.png" src="../../_images/architecture-shematic.png" style="height: 12cm;" /></a>
+<figcaption>
+<p><span class="caption-text">An overview of the HPC cluster architecture.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-the-main-components-of-the-hpc-cluster callout admonition" id="callout-0">
+<p class="admonition-title">The main components of the HPC cluster</p>
+<ul class="simple">
+<li><p><strong>compute</strong> - a collection of computers or servers that are the main power of the computer cluster.</p></li>
+<li><p><strong>memory</strong> - high-speed and high capacity memory and storage systems for handling large amounts of data.</p></li>
+<li><p><strong>network</strong> - high-speed network systems that connect all parts of the cluster together</p></li>
+</ul>
+</div>
+<!--
+```{figure} ../img/architecture-Raj.png
+An overview of the HPC cluster architecture on the example the Raj HPC system at Marquette University.
+Figure taken from [https://www.marquette.edu/high-performance-computing/architecture.php](https://www.marquette.edu/high-performance-computing/architecture.php)
+```
+-->
+</section>
+<section id="compute">
+<h2>Compute<a class="headerlink" href="#compute" title="Permalink to this heading"></a></h2>
+<p>The computer cluster consists of a large number of compute nodes (machines) organized in blades and racks. Multiple racks make a computer cluster.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/hpc-architecture.png"><img alt="../../_images/hpc-architecture.png" src="../../_images/hpc-architecture.png" style="height: 8cm;" /></a>
+<figcaption>
+<p><span class="caption-text">The supercomputer is built of the number of compute nodes</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Modern HPC systems are hybrid computing systems equipped with a conventional CPU (AMD or Intel) and various accelerators. Nowadays, the dominant accelerators are graphics processors (Nvidia and AMD), but also <a class="reference external" href="https://simple.wikipedia.org/wiki/Field-programmable_gate_array">FPGA</a>, Many Integrated Core (MIC) from Intel (e.g. <a class="reference external" href="https://en.wikipedia.org/wiki/Xeon_Phi">Xeon Phi</a> - discountinued), and Tensor Processing Units (<a class="reference external" href="https://en.wikipedia.org/wiki/Tensor_Processing_Unit">TPU</a>).</p>
+<p>To improve the energy efficiency and scalability of HPC systems that consume a lot of electric power, ARM processors are becoming increasingly popular in the HPC world. An example are the Fujitsu <a class="reference external" href="https://www.fujitsu.com/global/products/computing/servers/supercomputer/a64fx/">A64FX</a> processor, the SiPearl <a class="reference external" href="https://sipearl.com/en">Rhea</a> or NVIDIA <a class="reference external" href="https://developer.nvidia.com/blog/nvidia-grace-cpu-superchip-architecture-in-depth/">Grace</a>.</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../../_images/supek-gpu-server.png"><img alt="../../_images/supek-gpu-server.png" src="../../_images/supek-gpu-server.png" style="height: 12cm;" /></a>
+<figcaption>
+<p><span class="caption-text">An example of the hybrid CPU-GPU computer server. Supercomputer Supek at the University Computing Centre in Zagreb.
+Picture taken from <a class="reference external" href="https://wiki.srce.hr/display/NR/Arhitektura+Supeka">https://wiki.srce.hr/display/NR/Arhitektura+Supeka</a>.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="memory">
+<h2>Memory<a class="headerlink" href="#memory" title="Permalink to this heading"></a></h2>
+<p>The memory in modern HPC (and every other) systems is a structured in different levels each with different type, speed and capacity.</p>
+<div class="admonition-do-you-know-why-there-are-multiple-types-and-levels-of-memory exercise important admonition-no-content admonition" id="exercise-0">
+<p class="admonition-title">Do you know why there are multiple types and levels of memory?</p>
+</div>
+<p>The goal of the memory hierarchy is to provide fast access to frequently used data while maintaining large storage capacities for less frequently accessed data. This hierarchy is critical for optimizing performance in HPC systems, where data access patterns and computational intensity vary widely across workloads.</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../_images/Memory-Hierarchy.jpg"><img alt="../../_images/Memory-Hierarchy.jpg" src="../../_images/Memory-Hierarchy.jpg" style="height: 12cm;" /></a>
+<figcaption>
+<p><span class="caption-text">Picture take from <a class="reference external" href="https://computerscience.chemeketa.edu/cs160Reader/ComputerArchitecture/MemoryHeirarchy.html">https://computerscience.chemeketa.edu/</a></span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="memory-hierarchy-in-moderh-hpc-systems">
+<h3>Memory hierarchy in moderh HPC systems<a class="headerlink" href="#memory-hierarchy-in-moderh-hpc-systems" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Level</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Size</strong></p></th>
+<th class="head"><p><strong>Speed</strong></p></th>
+<th class="head"><p><strong>Location</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Registers</p></td>
+<td><p>CPU Registers</p></td>
+<td><p>~KB</p></td>
+<td><p>1-2 cycles</p></td>
+<td><p>On-chip (CPU)</p></td>
+</tr>
+<tr class="row-odd"><td><p>L1 Cache</p></td>
+<td><p>SRAM</p></td>
+<td><p>32–64 KB/core</p></td>
+<td><p>2–4 cycles</p></td>
+<td><p>On-chip (CPU)</p></td>
+</tr>
+<tr class="row-even"><td><p>L2 Cache</p></td>
+<td><p>SRAM</p></td>
+<td><p>256 KB–1 MB/core</p></td>
+<td><p>10–20 cycles</p></td>
+<td><p>On-chip (CPU)</p></td>
+</tr>
+<tr class="row-odd"><td><p>L3 Cache</p></td>
+<td><p>SRAM</p></td>
+<td><p>10–100 MB/CPU</p></td>
+<td><p>20–60 cycles</p></td>
+<td><p>On-chip (CPU)</p></td>
+</tr>
+<tr class="row-even"><td><p>Main Memory</p></td>
+<td><p>DRAM (DDR4/DDR5)</p></td>
+<td><p>128 GB–4 TB/node</p></td>
+<td><p>20–100 ns</p></td>
+<td><p>Off-chip</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPU Memory</p></td>
+<td><p>HBM/GDDR6</p></td>
+<td><p>16–80 GB/GPU</p></td>
+<td><p>1–2 TB/s</p></td>
+<td><p>(HBM)</p></td>
+</tr>
+<tr class="row-even"><td><p>Non-Volatile Memory</p></td>
+<td><p>Intel Optane/NVDIMM</p></td>
+<td><p>100s GB–TB</p></td>
+<td><p>~DRAM speed</p></td>
+<td><p>Off-chip</p></td>
+</tr>
+<tr class="row-odd"><td><p>Local Storage</p></td>
+<td><p>NVMe SSD/HDD</p></td>
+<td><p>TBs–PBs</p></td>
+<td><p>μs–ms</p></td>
+<td><p>Node-local</p></td>
+</tr>
+<tr class="row-even"><td><p>Shared Storage</p></td>
+<td><p>Lustre/BeeGFS</p></td>
+<td><p>PBs–EBs</p></td>
+<td><p>Slower than local</p></td>
+<td><p>Network-attached</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tape Storage</p></td>
+<td><p>Tape Drives</p></td>
+<td><p>PBs–EBs</p></td>
+<td><p>Seconds–minutes</p></td>
+<td><p>Offline</p></td>
+</tr>
+</tbody>
+</table>
+<p>The main memory (also known as RAM - Random Access Memory) in an HPC cluster system or supercomputer is a critical component that directly impacts the performance of computational workloads. It serves as the primary workspace for data that the CPU and accelerators (e.g., GPUs) actively use during computation. The main memory is distributed and visible to only local CPUs and/or GPU (i.e. physical computer or compute node).</p>
+<p><strong>Storage</strong> is a large number of dedicated servers (computers) consisting of a high volume and high read and write speeds. The storage systems are distributed and visible to many (all) compute and login nodes.
+The storage has the following characteristics:</p>
+<ul class="simple">
+<li><p><strong>Scalability</strong>: highly scalable to accomodate growing data volumes generated and processed by HPC applications.</p></li>
+<li><p><strong>Performance</strong>: ensure that the data can be accessed, read and written at high speeds to keep pace with the computational requirements, support high-performance protocols, such as Parallel File Systems (parallel NFS), parallel IO</p></li>
+<li><p><strong>Parallelism</strong>: support parallel access to data across multiple nodes simultaneously, leverage parallel file systems and distributed storage architectures to maximize throughput and minimize contention.</p></li>
+<li><p><strong>Reliability and Availability</strong>: Secure uninterupted access to data and preventing data loss or corruption, incorporated features such as <em>redundancy</em>, <em>data replication</em>, <em>snapshotting</em>, etc.</p></li>
+<li><p><strong>Security</strong>: Dealing with sensitive or proprietary information, robust security features such as access control, encryption, authentication.</p></li>
+</ul>
+<p>Distributed file systems used nowadays in HPC: <a class="reference external" href="https://www.lustre.org/">Lustre</a>, <a class="reference external" href="https://www.ibm.com/docs/en/gpfs/4.1.0.4?topic=guide-introducing-general-parallel-file-s">GPFS</a>, <a class="reference external" href="https://docs.ceph.com/en/latest/start/intro/">Ceph</a>, <a class="reference external" href="https://www.beegfs.io/c/">BeeGFS</a>.</p>
+</section>
+</section>
+<section id="network">
+<h2>Network<a class="headerlink" href="#network" title="Permalink to this heading"></a></h2>
+<p>The major bottleneck in large scale and data-intensive applications is not computation but the <em>data movement</em>*! The modern processors can process data at much larger speeds then the data can be transferred (accessed or read) via the network. Therefor, the avaiability of fast interconnections is of paramount performance for HPC applications.</p>
+<div class="admonition-hpc-network callout admonition" id="callout-1">
+<p class="admonition-title">HPC network   </p>
+<p>The interconnection inside HPC cluster has to have <strong>high bandwidth</strong> and <strong>ultra low latency</strong>!</p>
+</div>
+<figure class="align-default" id="id5">
+<img alt="../../_images/latency-bandwidth.jpeg" src="../../_images/latency-bandwidth.jpeg" />
+<figcaption>
+<p><span class="caption-text">Figure taken from [https://www.dnsstuff.com/latency-throughput-bandwidth] (https://www.dnsstuff.com/latency-throughput-bandwidth)</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Today, several types of interconnection are predominately used in the HPC systems and these are Infiniband and Ethernet, however, recently interconnect types have emerged such as Slingshot, Omni-Path and Tofu.</p>
+<figure class="align-default" id="id6">
+<img alt="../../_images/interconnect-system-share.png" src="../../_images/interconnect-system-share.png" />
+<figcaption>
+<p><span class="caption-text">Graph taken from <a class="reference external" href="https://www.top500.org/statistics/list/">https://www.top500.org/statistics/list/</a></span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<div class="legend">
+<p class="rubric">Supercomputers</p>
+<p>An extremely large cluster computers comprising of specially designed hardware optimized for parallel processing, including specialized processors such as GPUs, high-speed interconnection and large-scale shared storage systems. Supercomputers usually consists of millions of processing cores and can deliver sustained performance in petaflops.</p>
+<div class="admonition-explore-supercomputers-3d-virtual-tour callout admonition" id="callout-2">
+<p class="admonition-title">Explore supercomputers (3D virtual tour)</p>
+<p><strong><a class="reference external" href="https://my.matterport.com/show/?m=2TLoTcWigBf">Fugaku</a></strong> - 6th largest supercomputer in the World</p>
+<p><strong><a class="reference external" href="https://360interactive.ade.fi/live/LUMI360/">LUMI</a></strong> - 8th in the World, 3rd in Europe (Finland)</p>
+</div>
+</div>
+</figcaption>
+</figure>
+<!--
+## Types of HPC architecture
+
+## Basic concepts
+
+### Distributed memory system
+
+### Shared memory system
+
+### Bandwidth
+
+### Latency
+-->
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ruđer Bošković Institute and EDIH AI4Health.CRO.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

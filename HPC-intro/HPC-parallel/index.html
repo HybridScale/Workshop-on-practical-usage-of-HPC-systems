@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parallel and distributed computing &mdash; EDIH AI4Health.Cro Training Course  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/overrides.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            EDIH AI4Health.Cro Training Course
+              <img src="../../_static/edih-logo-white-transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction to HPC for Health and Life Sciences</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../HPC-healthcare/HPC-intro/">About the Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../HPC-healthcare/HPC-def/">Introduction to High-Performance Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../HPC-healthcare/HPC-arch/">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../HPC-healthcare/HPC-parallel/">Parallel and distributed computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../HPC-healthcare/HPC-infra/">Available infrastructures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../HPC-healthcare/HPC-demo/">Demonstration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Working on the cluster</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Introduction/">Working on the Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/System-overview/">System overview (Supek)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Access-Public-Key/">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Running-jobs/">Running jobs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-reference/">Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ai4healthcro.eu">EDIH AI4Health.CRO</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.irb.hr/eng/Scientific-Support-Centres/Centre-for-Informatics-and-Computing/Projects/HRZZ/Scalable-high-performance-algorithms-for-future-heterogeneous-distributed-computer-systems">HybridScale project</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.hpc-cc.hr/">HPC-CC Croatia</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">EDIH AI4Health.Cro Training Course</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Parallel and distributed computing</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/hybridscale/content/blob/main/content/HPC-intro/HPC-parallel.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="parallel-and-distributed-computing">
+<h1>Parallel and distributed computing<a class="headerlink" href="#parallel-and-distributed-computing" title="Permalink to this heading"></a></h1>
+<section id="types-of-architectures">
+<h2>Types of architectures<a class="headerlink" href="#types-of-architectures" title="Permalink to this heading"></a></h2>
+<p>Today we have two basic types of parallel architectures - <strong>share memory systems</strong> and <strong>distributed memory systems</strong>. The combination of these two is called a hybrid systems and is the most common realization of modern HPC clusters.</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/dist-share-mem.png" src="../../_images/dist-share-mem.png" />
+<figcaption>
+<p><span class="caption-text">Shared-memory vs. distributed-memory system arhitecture.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-shared-memory callout admonition" id="callout-0">
+<p class="admonition-title"><strong>Shared memory</strong></p>
+<p>A type of system architecture (e.g. computer) that have a multiple physical processors having access to the common physical memory space. This means that all processors can read and write data to the same memory locations and exchange information.</p>
+<p><strong>Advantages:</strong> simpler to program, no need for explicit data transfers or sychronizationa among processors.</p>
+<p><strong>Disadvantages:</strong> can cause contention and scalability issues, processors compete for the memory access and bandwidth, cannot be easily scaled.</p>
+</div>
+<div class="admonition-distributed-memory callout admonition" id="callout-1">
+<p class="admonition-title"><strong>Distributed memory</strong></p>
+<p>A type of system architecture in which each processors or node has it own local memory and they communicate with each other through message passing. This means that each processor can access only its own memory space, and exchange information with other processors by sending and receiving messages.</p>
+<p><strong>Advantages:</strong> avoid contention and scalability, memory size does not limit the number of processors.</p>
+<p><strong>Disadvantages:</strong> more complicated to program, needs explicit data distribution and communication among the processors.</p>
+</div>
+</section>
+<section id="parallel-programming-models">
+<h2>Parallel programming models<a class="headerlink" href="#parallel-programming-models" title="Permalink to this heading"></a></h2>
+<section id="openmp">
+<h3>OpenMP<a class="headerlink" href="#openmp" title="Permalink to this heading"></a></h3>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../../_images/OpenMP_logo.png"><img alt="../../_images/OpenMP_logo.png" src="../../_images/OpenMP_logo.png" style="width: 20%;" /></a>
+</figure>
+<p><a class="reference external" href="https://www.openmp.org/">OpenMP</a> is a standard for programming shared memory systems. It is a directive-based programming model with a “lightweight” syntax that enables simple programming. The model uses the parallel fork-and-join model, i.e. the program is executed serially until it encounters a parallel region. Parallel regions are blocks of code that are executed simultaneously by all threads in a team.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/openmp-model.png"><img alt="../../_images/openmp-model.png" src="../../_images/openmp-model.png" style="height: 7cm;" /></a>
+<figcaption>
+<p><span class="caption-text">The fork-and-join parallel model. Figure taken from <a class="reference external" href="https://docs.nersc.gov/development/programming-models/openmp/">https://docs.nersc.gov/development/programming-models/openmp/</a></span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="mpi">
+<h3>MPI<a class="headerlink" href="#mpi" title="Permalink to this heading"></a></h3>
+<p>Message Passing Interface (MPI) is a widely used standard for parallel computing on distributed memory systems in which multiple processors communicate with each other by exchanging messages. It allows efficient communication among processes running on different computing nodes in a computer cluster.</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/mpi-basic.png" src="../../_images/mpi-basic.png" />
+<figcaption>
+<p><span class="caption-text">Basic MPI communication between two processors. Figure taken from <a class="reference external" href="https://www.cs.mtsu.edu/~rbutler/courses/pp6330/www.llnl.gov/computing/tutorials/workshops/workshop/mpi/MAIN.html">https://www.cs.mtsu.edu/~rbutler/courses/pp6330/www.llnl.gov/computing/tutorials/workshops/workshop/mpi/MAIN.html</a>.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The most popular implementations of the MPI standard are: <a class="reference external" href="https://www.mpich.org/">MPICH</a>, <a class="reference external" href="https://www.open-mpi.org/">OpenMPI</a> and various vendor specific implementation based on those two.</p>
+</section>
+<section id="gpu-programming-models">
+<h3>GPU programming models<a class="headerlink" href="#gpu-programming-models" title="Permalink to this heading"></a></h3>
+<p><a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html">CUDA</a> and <a class="reference external" href="https://rocm.docs.amd.com/en/latest/">ROCm</a> are parallel programming models for general purpose graphics cards (GPUs) developed by NVIDIA and AMD respectively. The model is based on the SIMT programming model (Single Instruction Multiple Threads), which means that a large number of threads execute the same single instruction asynchronously. As the GPUs are not independent processors, but accelerators or co-processors of the standard CPUs, the parts of the application code that are suitable for the GPU are offloaded while the rest of the code is executed on the CPU.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/gpu_acceleration.png" src="../../_images/gpu_acceleration.png" />
+<figcaption>
+<p><span class="caption-text">Heterogeneous programming model. Figure taken from <a class="reference external" href="https://es.mathworks.com/help/gpucoder/gs/gpu-prog-paradigm.html">https://es.mathworks.com/help/gpucoder/gs/gpu-prog-paradigm.html</a></span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<hr class="docutils" />
+<section id="job-scheduling">
+<h2>Job scheduling<a class="headerlink" href="#job-scheduling" title="Permalink to this heading"></a></h2>
+<p>Scheduling jobs and managing resources is one of the key components of HPC clusters that sets them apart from other types of computing systems. Since HPC clusters can have hundreds of users and compute nodes, it would be impossible to decide which users should use which resources without a queuing system. The specialized software called <code class="docutils literal notranslate"><span class="pre">scheduler</span></code> is responsible for deciding which user job is executed when on which resources (nodes).</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../_images/restaurant_queue_manager.png"><img alt="../../_images/restaurant_queue_manager.png" src="../../_images/restaurant_queue_manager.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">An illustration of the HPC job manager on the example of the restaurant. Figure taken from <a class="reference external" href="https://epcced.github.io/hpc-intro/13-scheduler/index.html">https://epcced.github.io/hpc-intro/13-scheduler/index.html</a>.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="workflow">
+<h3>Workflow<a class="headerlink" href="#workflow" title="Permalink to this heading"></a></h3>
+<p>In a typical workflow, a user connects to the cluster’s login node, where he/she describes (and prepares a job script file) how the jobs should be executed (the pipeline) and what resources are needed (number of processors, amount of memory, maximum execution time, etc.). Based on this information, the job scheduler places the job in the queue, where it waits until the requested resources are available. As soon as the resources are available, they are allocated and the job is executed on the allocated resources.</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../_images/batch_system.png"><img alt="../../_images/batch_system.png" src="../../_images/batch_system.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">Shematic of the batch scheduling system. Figure taken from <a class="reference external" href="https://hpc-wiki.info/hpc/Scheduling_Basics">https://hpc-wiki.info/hpc/Scheduling_Basics</a></span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The scheduler is responsible for all jobs of all users of the systems and tries to pack them as densely as possible onto the computing nodes in order to occupy the nodes as well as possible and minimize idle time.</p>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../../_images/scheduler.png"><img alt="../../_images/scheduler.png" src="../../_images/scheduler.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">An example of how scheduler may distribute jobs onto nodes. Figure taken from <a class="reference external" href="https://hpc-wiki.info/hpc/Scheduling_Basics">https://hpc-wiki.info/hpc/Scheduling_Basics</a></span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<hr class="docutils" />
+<section id="measuring-the-performance">
+<h2>Measuring the performance<a class="headerlink" href="#measuring-the-performance" title="Permalink to this heading"></a></h2>
+<div class="admonition-measure-of-computer-performance callout admonition" id="callout-2">
+<p class="admonition-title">Measure of computer performance</p>
+<p><strong>Floating-point operations per second (FLOPS)</strong>: Number of floating-point artihmetic calculations that the processor can perform within a second.</p>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Unit</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>megaFLOPS</p></td>
+<td><p>MFLOPS</p></td>
+<td><p>10<sup>6</sup></p></td>
+</tr>
+<tr class="row-odd"><td><p>gitaFLOPS</p></td>
+<td><p>GFLOPS</p></td>
+<td><p>10<sup>9</sup></p></td>
+</tr>
+<tr class="row-even"><td><p>teraFLOPS</p></td>
+<td><p>TFLOPS</p></td>
+<td><p>10<sup>12</sup></p></td>
+</tr>
+<tr class="row-odd"><td><p>petaFLOPS</p></td>
+<td><p>PFLOPS</p></td>
+<td><p>10<sup>15</sup></p></td>
+</tr>
+<tr class="row-even"><td><p>exaFLOPS</p></td>
+<td><p>EFLOPS</p></td>
+<td><p>10<sup>18</sup></p></td>
+</tr>
+<tr class="row-odd"><td><p>zettaFLOPS</p></td>
+<td><p>ZFLOPS</p></td>
+<td><p>10<sup>21</sup></p></td>
+</tr>
+</tbody>
+</table>
+<section id="benchmarks">
+<h3>Benchmarks<a class="headerlink" href="#benchmarks" title="Permalink to this heading"></a></h3>
+<p>The main benchmark used for the Top500 list is the <em>High Performance LINPACK</em> (<a class="reference external" href="https://www.netlib.org/benchmark/hpl/">HPL</a>) test and is based on a variant of <em>LU</em> factorization with row partial pivoting. The main critism is that it is not representative of many important applications.</p>
+<p>A new benchmark, called the <em>High Performance Conjugate Gradients</em> (<a class="reference external" href="https://www.hpcg-benchmark.org">HPCG</a>) is designed to exercise computational and data access pattern that more closely match a broader set of important applications.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ruđer Bošković Institute and EDIH AI4Health.CRO.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

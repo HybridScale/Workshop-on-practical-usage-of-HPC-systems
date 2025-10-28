@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to High-Performance Computing &mdash; EDIH AI4Health.Cro Training Course  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/overrides.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Architecture" href="../HPC-arch/" />
+    <link rel="prev" title="About the Course" href="../HPC-intro/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            EDIH AI4Health.Cro Training Course
+              <img src="../../_static/edih-logo-white-transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction to HPC for Health and Life Sciences</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../HPC-intro/">About the Course</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction to High-Performance Computing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#from-room-sized-machines-to-life-saving-simulations">1. From Room-Sized Machines to Life-Saving Simulations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#s-the-first-supercomputers">1940–1960s: The First Supercomputers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-cray-era">1970–1990: The Cray Era</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-cluster-era">1990–2010: The Cluster Era</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#present-the-gpu-hybrid-era">2010–Present: The GPU &amp; Hybrid Era</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-hpc-and-why-it-matters-to-you">2. What Is HPC — and Why It Matters to You</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hpc-in-everyday-healthcare-research">HPC in Everyday Healthcare Research</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#why-do-we-need-hpc">3. Why Do We Need HPC?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-grand-challenges-and-opportunities">The Grand Challenges (and Opportunities)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#in-one-sentence">In One Sentence:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reflection">Reflection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC-arch/">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC-parallel/">Parallel and distributed computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC-infra/">Available infrastructures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC-demo/">Demonstration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Working on the cluster</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Introduction/">Working on the Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/System-overview/">System overview (Supek)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Access-Public-Key/">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Running-jobs/">Running jobs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-reference/">Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ai4healthcro.eu">EDIH AI4Health.CRO</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.irb.hr/eng/Scientific-Support-Centres/Centre-for-Informatics-and-Computing/Projects/HRZZ/Scalable-high-performance-algorithms-for-future-heterogeneous-distributed-computer-systems">HybridScale project</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.hpc-cc.hr/">HPC-CC Croatia</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">EDIH AI4Health.Cro Training Course</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Introduction to High-Performance Computing</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/hybridscale/content/blob/main/content/HPC-healthcare/HPC-def.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction-to-high-performance-computing">
+<h1>Introduction to High-Performance Computing<a class="headerlink" href="#introduction-to-high-performance-computing" title="Permalink to this heading"></a></h1>
+<hr class="docutils" />
+<section id="from-room-sized-machines-to-life-saving-simulations">
+<h2>1. From Room-Sized Machines to Life-Saving Simulations<a class="headerlink" href="#from-room-sized-machines-to-life-saving-simulations" title="Permalink to this heading"></a></h2>
+<p>Before diving into what <em>High-Performance Computing (HPC)</em> means today, let’s take a quick trip through time — from the machines that filled entire rooms to the systems that help us model the human brain, predict pandemics, and design new cancer drugs.</p>
+<!-- > 💬 **Speaker note:**  
+> Open with a relatable statement:  
+> “Every medical CT scanner, every AI diagnostic model, every virtual drug screen — all of them trace their roots to computing power that started growing 80 years ago.”-->
+<hr class="docutils" />
+<section id="s-the-first-supercomputers">
+<h3>1940–1960s: The First Supercomputers<a class="headerlink" href="#s-the-first-supercomputers" title="Permalink to this heading"></a></h3>
+<p><strong>The birth of electronic computing</strong></p>
+<p>The first “supercomputers” emerged during World War II. They weren’t built for medicine, but for <strong>codebreaking, ballistics, and physics</strong> — yet they laid the foundation for every modern medical simulation.</p>
+<ul class="simple">
+<li><p>🖥️ <strong>ENIAC</strong> (1945) — the first electronic general-purpose computer, built for U.S. Army ballistics.</p></li>
+<li><p>These early machines were massive — <strong>the size of an operating room</strong>, consuming as much electricity as a hospital wing.</p></li>
+<li><p>Their mission: <strong>calculate faster than any human could</strong>.</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<img alt="../../_images/eniac.jpg" src="../../_images/eniac.jpg" />
+<figcaption>
+<p><span class="caption-text">ENIAC (1945) — one of the first electronic supercomputers, programmed manually with cables and switches. Figure taken from <a class="reference external" href="https://hr.wikipedia.org/wiki/ENIAC">Wikipedia</a>.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<!-- > 💬 **Speaker note:**  
+> “Just like medicine once relied on mechanical thermometers and hand-drawn charts, early science relied on machines like ENIAC to crunch equations that humans couldn’t handle.” -->
+</section>
+<hr class="docutils" />
+<section id="the-cray-era">
+<h3>1970–1990: The Cray Era<a class="headerlink" href="#the-cray-era" title="Permalink to this heading"></a></h3>
+<p><strong>When speed became a race</strong></p>
+<p>In the 1970s, speed became the focus.<br />
+Supercomputers like the <strong>Cray-1</strong> used <em>vector processors</em> to perform thousands of operations at once — a breakthrough that inspired modern GPUs (used in AI today).</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/Cray-1.jpg" src="../../_images/Cray-1.jpg" />
+<figcaption>
+<p><span class="caption-text">“Cray-1 (1976) — elegant design and groundbreaking parallelism.”<br />
+<em>(Original: <a class="reference external" href="https://en.wikipedia.org/wiki/Cray-1">Wikipedia – Cray-1</a>)</em></span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<!-- > 💬 **Speaker note:**  
+> “By the 1980s, HPC was no longer a military toy. It became the scientist’s microscope — used in chemistry, fluid dynamics, and even early biological modeling.”-->
+</section>
+<hr class="docutils" />
+<section id="the-cluster-era">
+<h3>1990–2010: The Cluster Era<a class="headerlink" href="#the-cluster-era" title="Permalink to this heading"></a></h3>
+<p><strong>From super-machines to super-teams of computers</strong></p>
+<p>Scientists realized that connecting <em>many smaller computers</em> could outperform one massive one — the birth of <strong>clusters</strong>.</p>
+<ul class="simple">
+<li><p>1994: NASA engineers built the first <em>Beowulf Cluster</em> using standard PCs and Ethernet cables.</p></li>
+<li><p>This democratized HPC — universities could now build their own “mini supercomputers.”</p></li>
+</ul>
+<figure class="align-default" id="id3">
+<img alt="../../_images/Beowolf2-300x174.jpg" src="../../_images/Beowolf2-300x174.jpg" />
+<figcaption>
+<p><span class="caption-text">Photo of a Beowolf Cluster. Figure taken from <a class="reference external" href="https://memim.com/beowulf-cluster.html">https://memim.com/beowulf-cluster.html</a>.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<!-- > 💬 **Speaker note:**  
+> “It’s like assembling a hospital network — many units working together, rather than one massive central building.”-->
+</section>
+<hr class="docutils" />
+<section id="present-the-gpu-hybrid-era">
+<h3>2010–Present: The GPU &amp; Hybrid Era<a class="headerlink" href="#present-the-gpu-hybrid-era" title="Permalink to this heading"></a></h3>
+<p><strong>From physics to AI and medicine</strong></p>
+<p>Today’s supercomputers combine <strong>traditional CPUs</strong> with <strong>GPUs and accelerators</strong> — the same hardware used for medical AI, radiology, and genomics.<br />
+Instead of a few super-fast processors, modern systems have <strong>thousands of smaller ones working together</strong>.</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/supek-gpu-server.png" src="../../_images/supek-gpu-server.png" />
+<figcaption>
+<p><span class="caption-text">Modern HPC combines CPUs and GPUs for AI, simulations, and data analytics.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<!-- > 💬 **Speaker note:**  
+> “We no longer chase higher clock speeds. Instead, we work smarter — splitting the work among many processors, just as hospital teams share complex cases.” -->
+</section>
+</section>
+<hr class="docutils" />
+<section id="what-is-hpc-and-why-it-matters-to-you">
+<h2>2. What Is HPC — and Why It Matters to You<a class="headerlink" href="#what-is-hpc-and-why-it-matters-to-you" title="Permalink to this heading"></a></h2>
+<p>So what exactly <em>is</em> HPC?</p>
+<p><strong>High-Performance Computing (HPC)</strong> means using <strong>many powerful computers at once</strong> to solve problems that are <strong>too big, too detailed, or too urgent</strong> for a single machine.</p>
+<p>It’s the <strong>engine behind modern data-driven medicine</strong> — where algorithms, images, and molecules meet computation.</p>
+<p>What is High-Performance Computing - <a class="reference external" href="https://www.youtube.com/watch?v=IniYMq2bJRI&amp;t=1s">YouTube</a> (Croatian).</p>
+<!--🖼️ **Suggested visual:**  
+Modern infographic showing a cluster → cloud of healthcare icons (DNA, brain scan, molecule, hospital).  
+*(Title: “How HPC powers modern medicine.”)*-->
+<!-- >💬 **Speaker note:**  
+> “Think of HPC as a hospital for data — thousands of processors working together to diagnose, simulate, and predict faster than any workstation could.”-->
+<hr class="docutils" />
+<section id="hpc-in-everyday-healthcare-research">
+<h3>HPC in Everyday Healthcare Research<a class="headerlink" href="#hpc-in-everyday-healthcare-research" title="Permalink to this heading"></a></h3>
+<p>Here’s how HPC touches your field, even if you don’t see it directly:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Application</p></th>
+<th class="head"><p>HPC’s Role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Radiology AI</strong></p></td>
+<td><p>Train deep neural networks on thousands of MRI/CT scans.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Drug discovery</strong></p></td>
+<td><p>Simulate how molecules bind to proteins.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Genomics</strong></p></td>
+<td><p>Process hundreds of patient genomes in parallel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Epidemiology</strong></p></td>
+<td><p>Model virus spread and hospital resource needs.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Surgery planning</strong></p></td>
+<td><p>Run 3D simulations of patient anatomy.</p></td>
+</tr>
+</tbody>
+</table>
+<!-- > 💬 **Speaker note:**  
+> “Behind every AI paper in *The Lancet* or *Nature Medicine*, there’s almost always an HPC system doing the heavy lifting.”-->
+</section>
+</section>
+<hr class="docutils" />
+<section id="why-do-we-need-hpc">
+<h2>3. Why Do We Need HPC?<a class="headerlink" href="#why-do-we-need-hpc" title="Permalink to this heading"></a></h2>
+<p>Most modern medical and pharmaceutical challenges are <strong>too large for desktop computers</strong>:</p>
+<ul class="simple">
+<li><p>A single CT scan can produce <strong>hundreds of megabytes</strong> of data.</p></li>
+<li><p>One genome = <strong>100 GB</strong> of raw data.</p></li>
+<li><p>A deep learning model might require <strong>weeks of computation</strong> without HPC.</p></li>
+</ul>
+<figure class="align-default" id="id5">
+<img alt="../../_images/laptop-vs-cluster.png" src="../../_images/laptop-vs-cluster.png" />
+<figcaption>
+<p><span class="caption-text">Laptop vs. Cluster</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<section id="the-grand-challenges-and-opportunities">
+<h3>The Grand Challenges (and Opportunities)<a class="headerlink" href="#the-grand-challenges-and-opportunities" title="Permalink to this heading"></a></h3>
+<p>The U.S. National Science Foundation once defined “<strong>Grand Challenges</strong>” — problems only solvable with HPC.<br />
+Many now directly relate to healthcare and life sciences:</p>
+<ul class="simple">
+<li><p>Cancer detection and therapy</p></li>
+<li><p>Drug design and molecular simulation</p></li>
+<li><p>Climate and disease modeling</p></li>
+<li><p>AI and deep learning</p></li>
+<li><p>Understanding biological systems</p></li>
+</ul>
+<!-- > 💬 **Speaker note:**  
+> “We often talk about grand challenges in medicine — curing cancer, predicting pandemics, understanding aging. HPC gives us the computational microscope to tackle them.”-->
+</section>
+<hr class="docutils" />
+<section id="in-one-sentence">
+<h3>In One Sentence:<a class="headerlink" href="#in-one-sentence" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>🧠 <strong>HPC allows us to ask bigger questions — and get answers faster.</strong></p>
+</div></blockquote>
+<div class="admonition-you-can callout admonition" id="callout-0">
+<p class="admonition-title">You can:</p>
+<ul class="simple">
+<li><p>Solve <strong>bigger problems in the same time</strong>, or</p></li>
+<li><p>Solve <strong>the same problems in less time</strong>.</p></li>
+</ul>
+</div>
+<!-- 🖼️ **Suggested visual:**  
+Simple two-column infographic:  
+_Left: “1 patient, 1 week”_ → Right: “1000 patients, 1 week”_  
+(Caption: “Parallel computing accelerates discovery.”)-->
+</section>
+<hr class="docutils" />
+<section id="reflection">
+<h3>Reflection<a class="headerlink" href="#reflection" title="Permalink to this heading"></a></h3>
+<div class="admonition-where-could-hpc-help-you exercise important admonition" id="exercise-0">
+<p class="admonition-title">Where could HPC help you?</p>
+<p>Think of a task in your daily work — an analysis, simulation, or AI model — that you <em>wish</em> could run faster or on more data.<br />
+Would HPC make it possible?</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../HPC-intro/" class="btn btn-neutral float-left" title="About the Course" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../HPC-arch/" class="btn btn-neutral float-right" title="Architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ruđer Bošković Institute and EDIH AI4Health.CRO.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

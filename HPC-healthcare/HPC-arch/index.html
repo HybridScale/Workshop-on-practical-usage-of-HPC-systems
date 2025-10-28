@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architecture &mdash; EDIH AI4Health.Cro Training Course  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/overrides.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Parallel and distributed computing" href="../HPC-parallel/" />
+    <link rel="prev" title="Introduction to High-Performance Computing" href="../HPC-def/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            EDIH AI4Health.Cro Training Course
+              <img src="../../_static/edih-logo-white-transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction to HPC for Health and Life Sciences</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../HPC-intro/">About the Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC-def/">Introduction to High-Performance Computing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cluster-architecture">Cluster architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#large-number-of-connected-computers">Large number of connected computers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#supercomputers">Supercomputers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC-parallel/">Parallel and distributed computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC-infra/">Available infrastructures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HPC-demo/">Demonstration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Working on the cluster</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Introduction/">Working on the Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/System-overview/">System overview (Supek)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Access-Public-Key/">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Working-on-Cluster/Running-jobs/">Running jobs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-reference/">Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ai4healthcro.eu">EDIH AI4Health.CRO</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.irb.hr/eng/Scientific-Support-Centres/Centre-for-Informatics-and-Computing/Projects/HRZZ/Scalable-high-performance-algorithms-for-future-heterogeneous-distributed-computer-systems">HybridScale project</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.hpc-cc.hr/">HPC-CC Croatia</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">EDIH AI4Health.Cro Training Course</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Architecture</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/hybridscale/content/blob/main/content/HPC-healthcare/HPC-arch.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="architecture">
+<h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this heading"></a></h1>
+<section id="cluster-architecture">
+<h2>Cluster architecture<a class="headerlink" href="#cluster-architecture" title="Permalink to this heading"></a></h2>
+<p>HPC is often equated with a cluster computer, a collection of computers linked together over a high-speed network to perform highly complex computing tasks. These connected computers (usually called <em>servers</em>) work together to provide the processing power to analyze and process large data sets, simulate complex systems, and solve complex scientific and engineering problems.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/architecture-shematic.png"><img alt="../../_images/architecture-shematic.png" src="../../_images/architecture-shematic.png" style="height: 12cm;" /></a>
+<figcaption>
+<p><span class="caption-text">An overview of the HPC cluster architecture.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-the-main-components-of-the-hpc-cluster callout admonition" id="callout-0">
+<p class="admonition-title">The main components of the HPC cluster</p>
+<ul class="simple">
+<li><p><strong>compute</strong> - a collection of computers or servers that are the main power of the computer cluster.</p></li>
+<li><p><strong>memory</strong> - high-speed and high capacity memory and storage systems for handling large amounts of data.</p></li>
+<li><p><strong>network</strong> - high-speed network systems that connect all parts of the cluster together</p></li>
+</ul>
+</div>
+<section id="large-number-of-connected-computers">
+<h3>Large number of connected computers<a class="headerlink" href="#large-number-of-connected-computers" title="Permalink to this heading"></a></h3>
+<p>The computer cluster consists of a large number of compute nodes (machines) organized in blades and racks. Multiple racks make a computer cluster.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/hpc-architecture.png"><img alt="../../_images/hpc-architecture.png" src="../../_images/hpc-architecture.png" style="height: 8cm;" /></a>
+<figcaption>
+<p><span class="caption-text">The supercomputer is built of the number of compute nodes</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Modern HPC systems are hybrid computing systems equipped with a conventional CPU (AMD or Intel) and various accelerators. Nowadays, the dominant accelerators are graphics processors (Nvidia and AMD), but also <a class="reference external" href="https://simple.wikipedia.org/wiki/Field-programmable_gate_array">FPGA</a>, Many Integrated Core (MIC) from Intel (e.g. <a class="reference external" href="https://en.wikipedia.org/wiki/Xeon_Phi">Xeon Phi</a> - discountinued), and Tensor Processing Units (<a class="reference external" href="https://en.wikipedia.org/wiki/Tensor_Processing_Unit">TPU</a>).</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../../_images/supek-gpu-server.png"><img alt="../../_images/supek-gpu-server.png" src="../../_images/supek-gpu-server.png" style="height: 12cm;" /></a>
+<figcaption>
+<p><span class="caption-text">An example of the hybrid CPU-GPU computer server. Supercomputer Supek at the University Computing Centre in Zagreb.
+Picture taken from <a class="reference external" href="https://wiki.srce.hr/display/NR/Arhitektura+Supeka">https://wiki.srce.hr/display/NR/Arhitektura+Supeka</a>.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="supercomputers">
+<h2>Supercomputers<a class="headerlink" href="#supercomputers" title="Permalink to this heading"></a></h2>
+<p>An extremely large cluster computers comprising of specially designed hardware optimized for parallel processing, including specialized processors such as GPUs, high-speed interconnection and large-scale shared storage systems. Supercomputers usually consists of millions of processing cores and can deliver sustained performance in petaflops.</p>
+<div class="admonition-explore-supercomputers-3d-virtual-tour callout admonition" id="callout-1">
+<p class="admonition-title">Explore supercomputers (3D virtual tour)</p>
+<p><strong><a class="reference external" href="https://my.matterport.com/show/?m=2TLoTcWigBf">Fugaku</a></strong> - 6th largest supercomputer in the World</p>
+<p><strong><a class="reference external" href="https://360interactive.ade.fi/live/LUMI360/">LUMI</a></strong> - 8th in the World, 3rd in Europe (Finland)</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../HPC-def/" class="btn btn-neutral float-left" title="Introduction to High-Performance Computing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../HPC-parallel/" class="btn btn-neutral float-right" title="Parallel and distributed computing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ruđer Bošković Institute and EDIH AI4Health.CRO.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
