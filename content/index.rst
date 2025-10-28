@@ -25,7 +25,7 @@ on remote computing platforms.
 
    preparation.md
 ..
-.. tocreetree::
+.. toctree::
    :maxdepth: 1
    :caption: Introduction to HPC for Health and Life Sciences
 
