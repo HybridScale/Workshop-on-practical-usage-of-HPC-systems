@@ -177,6 +177,21 @@ The Development and Benchmark calls are continuously open, with deadlines set fo
 Detailed information on Access Policy can be found [here](https://eurohpc-ju.europa.eu/access-our-supercomputers/access-policy-and-faq_en).
 
 ---
+## AI Factories
+
+Specialized supercomputing capacities of the [EuroHPC JU](https://digital-strategy.ec.europa.eu/en/policies/ai-factories) to develop trustworthy cutting-edge generative AI models.
+
+
+```{figure} ../img/AI-Factories.jpg
+List of AI Factories. From [AI Factories](https://digital-strategy.ec.europa.eu/en/policies/ai-factories)
+
+```{challenge} Access Modes: 
+- Playground - limited resources for entry-level users
+- Fast Lane - for users familiar with HPC, up to 50,000 GPU hours
+- Large Scale - for AI models and application requiring more than 50,000 GPU hours
+More info on the [link](https://www.eurohpc-ju.europa.eu/ai-factories/ai-factories-access-modes_en)
+```
+---
 
 ## Private HPC providers
 
