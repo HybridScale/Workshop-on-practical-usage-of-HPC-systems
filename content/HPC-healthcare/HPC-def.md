@@ -122,9 +122,9 @@ Most modern medical and pharmaceutical challenges are **too large for desktop co
 - One genome = **100 GB** of raw data.  
 - A deep learning model might require **weeks of computation** without HPC.
 
-🖼️ **Suggested visual:**  
-Graphic: “Laptop vs. HPC Cluster” — same task (e.g., drug screening) shown taking weeks vs. hours.
-
+```{figure} ../img/laptop-vs-cluster.png
+Laptop vs. Cluster
+```
 ---
 
 ### The Grand Challenges (and Opportunities)
@@ -147,9 +147,10 @@ Many now directly relate to healthcare and life sciences:
 
 > 🧠 **HPC allows us to ask bigger questions — and get answers faster.**
 
-``{callout} You can:
+```{callout} You can:
 - Solve **bigger problems in the same time**, or  
 - Solve **the same problems in less time**.
+```
 
 <!-- 🖼️ **Suggested visual:**  
 Simple two-column infographic:  
@@ -163,4 +164,4 @@ _Left: “1 patient, 1 week”_ → Right: “1000 patients, 1 week”_
 ```{challenge} Where could HPC help you?
 Think of a task in your daily work — an analysis, simulation, or AI model — that you *wish* could run faster or on more data.  
 Would HPC make it possible?
-
+```

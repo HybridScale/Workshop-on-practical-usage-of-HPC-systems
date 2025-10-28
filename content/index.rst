@@ -29,6 +29,7 @@ on remote computing platforms.
    :maxdepth: 1
    :caption: Introduction to HPC for Health and Life Sciences
 
+   HPC-healthcare/HPC-intro.md
    HPC-healthcare/HPC-def.md
 
 ..
