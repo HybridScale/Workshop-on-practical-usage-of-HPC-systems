@@ -31,6 +31,7 @@ on remote computing platforms.
 
    HPC-healthcare/HPC-intro.md
    HPC-healthcare/HPC-def.md
+   HPC-healthcare/HPC-infra.md
 
 ..
    .. toctree::
