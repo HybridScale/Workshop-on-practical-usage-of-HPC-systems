@@ -31,6 +31,8 @@ on remote computing platforms.
 
    HPC-healthcare/HPC-intro.md
    HPC-healthcare/HPC-def.md
+   HPC-healthcare/HPC-arch.md
+   HPC-healthcare/HPC-parallel.md
    HPC-healthcare/HPC-infra.md
 
 ..
