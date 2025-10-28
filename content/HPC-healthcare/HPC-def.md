@@ -6,9 +6,9 @@
 
 Before diving into what *High-Performance Computing (HPC)* means today, let’s take a quick trip through time — from the machines that filled entire rooms to the systems that help us model the human brain, predict pandemics, and design new cancer drugs.
 
-> 💬 **Speaker note:**  
+<!-- > 💬 **Speaker note:**  
 > Open with a relatable statement:  
-> “Every medical CT scanner, every AI diagnostic model, every virtual drug screen — all of them trace their roots to computing power that started growing 80 years ago.”
+> “Every medical CT scanner, every AI diagnostic model, every virtual drug screen — all of them trace their roots to computing power that started growing 80 years ago.”-->
 
 ---
 
